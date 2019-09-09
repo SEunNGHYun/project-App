@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, HashRouter as Router} from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import Api from "../server/API";
 import Main from "./MainPage";
 import UserList from "./Userlist";
@@ -60,7 +60,7 @@ export default class App extends Component {
     return (
       <div>
       <div className="Home"> 
-      <Router>
+      <HashRouter>
       <Route exact path="/" component={Main} />
       <Route exact path="/users" render={(props)=> 
       <UserList {...props} 
@@ -72,7 +72,7 @@ export default class App extends Component {
         <Userinfo {...props} info={this.state.clickData}/>}/>
       <Route exact path="/user/todo" render={(props)=>
         <UserTodos {...props} todos={this.state.userTodoList}/>}/>
-      </Router> 
+      </HashRouter> 
       </div>
       </div>
     )

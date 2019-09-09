@@ -3,7 +3,10 @@ import { Link, HashRouter as Router} from "react-router-dom";
 
 export default function todo(props) {
     console.log(props.todos);
-    return (
+    const goBack = ()=> {
+        return props.history.goBack();
+    }    
+        return (
         <div>
             <select>
                 <option>complete</option>
@@ -25,8 +28,8 @@ export default function todo(props) {
             <Link to="/">
             <button>집으로</button>
             </Link>
+            <button onClick={goBack}>뒤로 가기</button>
             </Router>
-          
         </div>
     )
 }
