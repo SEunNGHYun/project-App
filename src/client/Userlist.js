@@ -12,7 +12,7 @@ export default function Userlist(props){
         {props.data.map(data => <option key={data.id} value={data.name}>{data.name}</option>)}
         </select>
         <Router>
-        <Link to="/user/info">
+        <Link to="/user/info"> 
         <button className="listButt" onClick={props.listbutt}>선택하기</button>
         </Link>
         <Link to ="/">
