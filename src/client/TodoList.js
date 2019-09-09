@@ -17,7 +17,7 @@ export default function todo(props) {
                   <option>-Ing</option>
             {props.todos.map(todo =>{
                 if(todo.completed === false){
-                    return <option key={todo.id} value={todo.title}>{todo.title}</option>
+                    return  <option key={todo.id} value={todo.title}>{todo.title}</option>
                 }
             })}
               </select>
