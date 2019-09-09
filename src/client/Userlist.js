@@ -5,13 +5,15 @@ export default function Userlist({data , list, listbutt}){
     return(
         <div>
         <select onChange={value => list(value)}>
-            <option value="">--------</option>
+            <option value="" >--------</option>
         {data.map(data => <option key={data.id} value={data.name}>{data.name}</option>)}
         </select>
         <Router>
-        <Link to="/user/:info">
+        <Link to="/user/info">
         <button className="listButt" onClick={listbutt}>선택하기</button>
         </Link>
+        <Link to ="/">
+        <button>집으로</button></Link>
         </Router>
     </div>
     )
